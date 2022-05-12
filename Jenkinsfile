@@ -20,7 +20,7 @@ pipeline {
 
             }
             steps {
-                sh 'docker build --build-arg BACKEND_HOST=${BE_HOST} -t fsalazarr/praxis-gildedrose_frontend: .'
+                sh 'docker build --build-arg BACKEND_HOST=${BE_HOST} -t fsalazarr/praxis-gildedrose_frontend:latest .'
                 // sh 'docker run -p 4200:4200 -d fsalazarr/praxis-gildedrose_frontend'
             }
         }
