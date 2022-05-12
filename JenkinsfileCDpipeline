@@ -3,7 +3,6 @@ pipeline {
   stages{
     stage("Run images") {
        steps {
-          sh 'docker rm -f $(docker ps -a -q)'
           sh 'docker rmi -f $(docker images -a -q)'
           sh 'docker-compose up -d'
        }
