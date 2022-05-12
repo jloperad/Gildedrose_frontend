@@ -15,7 +15,7 @@ pipeline {
                 // )}"""
                 BE_HOST = """${sh(
                     returnStdout: true,
-                    script: 'docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" jloperad/praxis-gildedrose_backend'
+                    script: 'docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" backend'
                 )}"""
 
             }
