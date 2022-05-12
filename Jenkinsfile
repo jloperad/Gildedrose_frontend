@@ -4,7 +4,7 @@ pipeline{
         stage('Build frontend'){
             agent any
             steps{
-                sh 'docker build -t jloperad/praxis-gildedrose_frontend:latest .'
+                sh 'docker build -t jloperad/praxis-gildedrose_frontend .'
             }
         }   
         stage('Docker Push') {
