@@ -4,7 +4,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'node --version'
-                // sh 'svn --version'
+                sh 'svn --version'
+                sh 'docker image ls'
             }
         }
     }
