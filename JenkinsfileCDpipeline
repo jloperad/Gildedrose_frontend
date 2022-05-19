@@ -7,7 +7,9 @@ pipeline {
           sh ' docker rm backend'
           sh 'docker stop frontend'
           sh ' docker rm frontend'
+          
           sh 'docker rmi -f $(docker images -a -q)'
+
           sh 'docker pull jloperad/praxis-gildedrose_backend'
           sh 'docker pull jloperad/praxis-gildedrose_frontend'
           sh 'docker-compose up -d'
